@@ -9,8 +9,13 @@ all: client.o server.o
 	gcc build/server.o -o build/server
 
 run:
-	# Needs work
-	./build/client && ./build/server
+	# Run the server as a background process. Space after nohup is required.
+	nohup ./build/server &
+
+	# Run the client now that the server is up.
+	./build/client
 
 clean:
-	rm -f build/*
+	# Gets rid of executables (without a file extension) using the find command
+	# then specifically removes the object files.
+	find ./build -type f -not -iname "*.*" -delete && rm -f build/*.o

@@ -1,0 +1,6 @@
+# Ignore all in build
+build/*
+# Unignore specifically what you what in build
+!build/*.txt*
+# The above two rules will prevent us from pushing our binaries to GitHub
+nohup.out
