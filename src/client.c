@@ -3,13 +3,10 @@
 #include <unistd.h> 
 #include <netinet/in.h>
 #include <unistd.h>
-
 #include <pthread.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/time.h>
-
-
 
 int connected;
 int connection_est = 1;
@@ -44,7 +41,7 @@ pthread_t thread;
 //     return NULL;
 // }
 
-void *get_server_messages(network_socket)
+void *get_server_messages(int network_socket)
 {
     // pthread_t id = pthread_self();
     // int network_socket = *((int *) arg);
@@ -72,12 +69,6 @@ void *get_server_messages(network_socket)
     // for(int i=0; i<(0xFFFFFFFF);i++);
     return NULL;
 }
-
-
-
-
-
-
 
 int main(int argc, char const *argv[])
 {

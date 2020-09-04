@@ -1,6 +1,5 @@
 #include <curl/curl.h>
 
-
  //  CURL *curl;
  //  CURLcode res;
  
@@ -96,10 +95,6 @@
 	// } 
 	// else
 	// 	printf("no arb\n");
-
-
-
-
 
 int main(int argc, char const *argv[])
 {
