@@ -36,13 +36,16 @@ void *get_server_messages(int network_socket)
 
 int main(int argc, char const *argv[])
 {
+	pid_t pid;
+	
 	struct sockaddr_in server_address;
+	
 	char user_input[256];
+	
 	int network_socket, 
 	connection_status, 
 	server_socket,
 	input_length,
-	pid,
 	input_status;
 	
 	network_socket = socket(AF_INET, SOCK_STREAM, 0);
